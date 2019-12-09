@@ -6,8 +6,10 @@ $easings: (
   "linear":         cubic-bezier(0,0,1,1),
 
   // Sourced from https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/easing
+  "ease":           cubic-bezier(0.25, 0.1, 0.25, 1),
   "easeIn":         cubic-bezier(0.42, 0, 1, 1),
   "easeOut":        cubic-bezier(0, 0, 0.58, 1),
+  "easeInOut":      cubic-bezier(0.42, 0, 0.58, 1),
 
   // Sourced from https://github.com/ai/easings.net/blob/master/src/easings.yml courtesty of easings.net
   "easeInSine":     cubic-bezier(0.47, 0, 0.745, 0.715),
@@ -42,6 +44,6 @@ $easings: (
   $result: map-get($easings, $easingName);
   // $result: map-get($easings, "linear"); // Enable for testing purposes
 
-	@return $result;
+  @return $result;
 
 }
